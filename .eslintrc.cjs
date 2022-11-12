@@ -2,6 +2,7 @@ module.exports = {
   env: {
     es2021: true,
     node: true,
+    jest: true,
   },
   extends: ["xo", "prettier"],
   overrides: [
@@ -16,6 +17,19 @@ module.exports = {
         ],
         "@typescript-eslint/indent": "off",
         "@typescript-eslint/no-empty-function": "off",
+        "no-implicit-coercion": "off",
+      },
+    },
+    {
+      files: ["./src/**/models/**/*.ts"],
+      rules: {
+        "@typescript-eslint/naming-convention": "off",
+      },
+    },
+    {
+      files: ["./src/**/routers/**/*.ts"],
+      rules: {
+        "new-cap": "off",
       },
     },
   ],
@@ -23,7 +37,5 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  rules: {
-    "no-implicit-coercion": "off",
-  },
+  rules: {},
 };
