@@ -1,6 +1,7 @@
+import "../../../loadEnvironment.js";
 import type { Response, Request, NextFunction } from "express";
-import CustomError from "../../../CustomError/CustomError";
-import User from "../../../database/models/Users";
+import CustomError from "../../../CustomError/CustomError.js";
+import User from "../../../database/models/Users.js";
 import type { UserCredencials } from "../../../types/types";
 import bcrypt from "bcryptjs";
 
