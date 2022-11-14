@@ -50,7 +50,7 @@ describe("Given a controller 'userController'", () => {
     });
 
     describe("When it receives a request with the username 'rodrigo' and password '1234' and a next function", () => {
-      test("Then it should call next with a CustomError with publicMessage 'Incorrect credentials'", async () => {
+      test("Then it should call next with a CustomError with publicMessage 'Wrong credentials'", async () => {
         userTest.username = "notrodrigo";
         req.body = userTest;
 
