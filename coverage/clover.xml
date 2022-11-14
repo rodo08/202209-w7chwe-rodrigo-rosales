@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1668198334998" clover="3.2.0">
-  <project timestamp="1668198334998" name="All files">
-    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
+<coverage generated="1668406711125" clover="3.2.0">
+  <project timestamp="1668406711125" name="All files">
+    <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="5" coveredelements="5" complexity="0" loc="4" ncloc="4" packages="1" files="1" classes="1"/>
+    <file name="CustomError.ts" path="C:\Users\Rod\Documents\ISDI\ISDI Challenges\semana 7\challenge-weekend\back\src\CustomError\CustomError.ts">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+    </file>
   </project>
 </coverage>
