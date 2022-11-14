@@ -1,13 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1668406711125" clover="3.2.0">
-  <project timestamp="1668406711125" name="All files">
-    <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="5" coveredelements="5" complexity="0" loc="4" ncloc="4" packages="1" files="1" classes="1"/>
-    <file name="CustomError.ts" path="C:\Users\Rod\Documents\ISDI\ISDI Challenges\semana 7\challenge-weekend\back\src\CustomError\CustomError.ts">
+<coverage generated="1668429749496" clover="3.2.0">
+  <project timestamp="1668429749496" name="All files">
+    <metrics statements="28" coveredstatements="25" conditionals="3" coveredconditionals="2" methods="2" coveredmethods="2" elements="33" coveredelements="29" complexity="0" loc="28" ncloc="28" packages="4" files="4" classes="4"/>
+    <package name="src">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="loadEnvironment.ts" path="C:\Users\Rod\Documents\ISDI\ISDI Challenges\semana 7\challenge-weekend\back\src\loadEnvironment.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.CustomError">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="4" count="1" type="stmt"/>
-      <line num="5" count="1" type="stmt"/>
-      <line num="7" count="1" type="stmt"/>
-      <line num="11" count="1" type="stmt"/>
-    </file>
+      <file name="CustomError.ts" path="C:\Users\Rod\Documents\ISDI\ISDI Challenges\semana 7\challenge-weekend\back\src\CustomError\CustomError.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.database.models">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="Users.ts" path="C:\Users\Rod\Documents\ISDI\ISDI Challenges\semana 7\challenge-weekend\back\src\database\models\Users.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.server.controllers.userControllers">
+      <metrics statements="16" coveredstatements="13" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="userControllers.ts" path="C:\Users\Rod\Documents\ISDI\ISDI Challenges\semana 7\challenge-weekend\back\src\server\controllers\userControllers\userControllers.ts">
+        <metrics statements="16" coveredstatements="13" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="cond" truecount="2" falsecount="1"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>
