@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import type { Request, Response, NextFunction } from "express";
 import User from "../../../database/models/Users";
 import { loginUser } from "./userControllers";
+import loginError from "../../../CustomError/types";
 
 beforeEach(() => {
   jest.clearAllMocks();
@@ -45,6 +46,18 @@ describe("Given a controller 'userController'", () => {
 
         expect(res.status).toHaveBeenCalledWith(expectedStatus);
         expect(res.json).toBeCalledWith({ token });
+      });
+    });
+
+    describe("When it receives a request with the username 'rodrigo' and password '1234' and a next function", () => {
+      test("Then it should call next with a CustomError with publicMessage 'Incorrect credentials'", async () => {
+        userTest.username = "notrodrigo";
+        req.body = userTest;
+
+        User.findOne = jest.fn().mockResolvedValueOnce(null);
+        await loginUser(req as Request, res as Response, next as NextFunction);
+
+        expect(next).toHaveBeenCalledWith(loginError.userNotFound);
       });
     });
   });

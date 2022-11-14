@@ -6,7 +6,7 @@ describe("Given a CustomError", () => {
       const expectedError = {
         message: "An error ocurred",
         statusCode: 400,
-        publicMessage: "This is a private massage",
+        publicMessage: "This is a private message",
       };
 
       const expectedMessage = expectedError.message;
