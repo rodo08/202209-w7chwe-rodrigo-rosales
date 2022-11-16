@@ -10,6 +10,8 @@ export interface UserCredentials {
 }
 
 export interface RegisterData extends UserCredentials {
+  username: string;
+  password: string;
   email: string;
 }
 
