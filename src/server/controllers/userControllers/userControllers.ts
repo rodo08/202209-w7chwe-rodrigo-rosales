@@ -4,6 +4,7 @@ import type { Response, Request, NextFunction } from "express";
 import CustomError from "../../../CustomError/CustomError.js";
 import User from "../../../database/models/Users.js";
 import type {
+  RegisterData,
   UserCredentials,
   UserTokenPayload,
 } from "../../../types/types.js";
@@ -37,4 +38,32 @@ export const loginUser = async (
   });
 
   res.status(200).json({ token });
+};
+
+export const registerUser = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  const { username, password, email } = req.body as RegisterData;
+
+  try {
+    const passwordHashed = await bcrypt.hash(password, 10);
+
+    const newUser = await User.create({
+      username,
+      email,
+      password: passwordHashed,
+    });
+
+    res.status(201).json({ message: `User ${newUser.username} created` });
+  } catch (error: unknown) {
+    const customError = new CustomError(
+      (error as Error).message,
+      500,
+      "Error during registration"
+    );
+
+    next(customError);
+  }
 };
