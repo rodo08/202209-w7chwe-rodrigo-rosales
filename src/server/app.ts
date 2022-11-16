@@ -3,8 +3,11 @@ import express from "express";
 import morgan from "morgan";
 import { generalError, unknownEndpoint } from "../middlewares/errors/errors.js";
 import usersRouter from "../routers/userRouter.js";
+import cors from "cors";
 
 const app = express();
+
+app.use(cors());
 
 app.disable("x-powered-by");
 
