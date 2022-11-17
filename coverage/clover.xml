@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1668712734966" clover="3.2.0">
-  <project timestamp="1668712734966" name="All files">
-    <metrics statements="75" coveredstatements="69" conditionals="7" coveredconditionals="5" methods="7" coveredmethods="5" elements="89" coveredelements="79" complexity="0" loc="75" ncloc="75" packages="8" files="9" classes="9"/>
+<coverage generated="1668714642637" clover="3.2.0">
+  <project timestamp="1668714642637" name="All files">
+    <metrics statements="75" coveredstatements="71" conditionals="7" coveredconditionals="5" methods="7" coveredmethods="5" elements="89" coveredelements="81" complexity="0" loc="75" ncloc="75" packages="8" files="9" classes="9"/>
     <package name="src">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="loadEnvironment.ts" path="C:\Users\Rod\Documents\ISDI\ISDI Challenges\semana 7\challenge-weekend\back\src\loadEnvironment.ts">
@@ -16,9 +16,9 @@
       <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="CustomError.ts" path="C:\Users\Rod\Documents\ISDI\ISDI Challenges\semana 7\challenge-weekend\back\src\CustomError\CustomError.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="4" count="6" type="stmt"/>
-        <line num="5" count="6" type="stmt"/>
-        <line num="7" count="6" type="stmt"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="7" count="7" type="stmt"/>
         <line num="11" count="3" type="stmt"/>
       </file>
       <file name="types.ts" path="C:\Users\Rod\Documents\ISDI\ISDI Challenges\semana 7\challenge-weekend\back\src\CustomError\types.ts">
@@ -99,9 +99,9 @@
       </file>
     </package>
     <package name="src.server.controllers.userControllers">
-      <metrics statements="24" coveredstatements="22" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+      <metrics statements="24" coveredstatements="24" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
       <file name="userControllers.ts" path="C:\Users\Rod\Documents\ISDI\ISDI Challenges\semana 7\challenge-weekend\back\src\server\controllers\userControllers\userControllers.ts">
-        <metrics statements="24" coveredstatements="22" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <metrics statements="24" coveredstatements="24" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
@@ -119,13 +119,13 @@
         <line num="36" count="2" type="stmt"/>
         <line num="40" count="2" type="stmt"/>
         <line num="43" count="2" type="stmt"/>
-        <line num="48" count="1" type="stmt"/>
-        <line num="50" count="1" type="stmt"/>
-        <line num="51" count="1" type="stmt"/>
-        <line num="53" count="1" type="stmt"/>
+        <line num="48" count="2" type="stmt"/>
+        <line num="50" count="2" type="stmt"/>
+        <line num="51" count="2" type="stmt"/>
+        <line num="53" count="2" type="stmt"/>
         <line num="59" count="1" type="stmt"/>
-        <line num="61" count="0" type="stmt"/>
-        <line num="67" count="0" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="67" count="1" type="stmt"/>
       </file>
     </package>
   </project>

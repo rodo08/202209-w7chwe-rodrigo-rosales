@@ -95,5 +95,27 @@ describe("Given a controller 'registerUser'", () => {
       expect(res.status).toHaveBeenCalledWith(expectedStatus);
       expect(res.json).toHaveBeenCalledWith(expectedMessage);
     });
+
+    describe("When it receives a request with the username 'rodrigo', password '1234' and email 'rod@drigo.com' which ara already in the database", () => {
+      test("Then it should call the next function with a CustomError", async () => {
+        const registerUserData: RegisterData = {
+          username: "rodrigo",
+          password: "1234",
+          email: "rod@drigo.com",
+        };
+        const req: Partial<Request> = {
+          body: registerUserData,
+        };
+        const error = new Error("");
+        User.create = jest.fn().mockRejectedValue(error);
+
+        await registerUser(
+          req as Request,
+          res as Response,
+          next as NextFunction
+        );
+        expect(next).toBeCalledWith(error);
+      });
+    });
   });
 });
