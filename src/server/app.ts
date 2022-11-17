@@ -7,7 +7,15 @@ import cors from "cors";
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "https://202209-w7chwe-rodrigo-rosales-front.netlify.app/",
+      "http://localhost:4000",
+      "http://localhost:3000",
+    ],
+  })
+);
 
 app.disable("x-powered-by");
 
