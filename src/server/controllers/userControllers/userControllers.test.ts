@@ -3,8 +3,9 @@ import jwt from "jsonwebtoken";
 import mongoose from "mongoose";
 import type { Request, Response, NextFunction } from "express";
 import User from "../../../database/models/Users";
-import { loginUser } from "./userControllers";
+import { loginUser, registerUser } from "./userControllers.js";
 import loginError from "../../../CustomError/types";
+import type { RegisterData } from "../../../types/types";
 
 beforeEach(() => {
   jest.clearAllMocks();
@@ -59,6 +60,40 @@ describe("Given a controller 'userController'", () => {
 
         expect(next).toHaveBeenCalledWith(loginError.userNotFound);
       });
+    });
+  });
+});
+
+describe("Given a controller 'registerUser'", () => {
+  describe("When it receives a request with the username 'rodo', the password '1234' and the email 'ro@do.com'", () => {
+    test("Then a status 201 should be received along the new user's data", async () => {
+      const expectedStatus = 201;
+      const registerUserData: RegisterData = {
+        username: "rodo",
+        password: "1234",
+        email: "ro@do.com",
+      };
+
+      const req: Partial<Request> = {
+        body: registerUserData,
+      };
+
+      const userId = new mongoose.Types.ObjectId();
+
+      bcrypt.hash = jest.fn().mockResolvedValue(registerUserData.password);
+      User.create = jest.fn().mockResolvedValue({
+        ...registerUserData,
+        _id: userId,
+      });
+
+      const expectedMessage = {
+        message: "User rodo created",
+      };
+
+      await registerUser(req as Request, res as Response, null);
+
+      expect(res.status).toHaveBeenCalledWith(expectedStatus);
+      expect(res.json).toHaveBeenCalledWith(expectedMessage);
     });
   });
 });
